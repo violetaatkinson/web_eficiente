@@ -250,38 +250,30 @@ main {
 .header .bg {
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  background: rgba(4,15,55,.4);
+  background: linear-gradient(90deg, rgba(15,58,143,.55), rgba(8,19,54,.7) 40%, rgba(8,19,54,.7) 60%, rgba(15,58,143,.55));
   height: 100%;
   left: 0;
   top: 0;
-  opacity: 0;
   position: absolute;
-  transition: opacity .3s ease;
   width: 100%;
   z-index: -1;
 }
-.header.show-menu .bg { opacity: 1; }
 .header__row {
   align-items: center;
   display: flex;
-  justify-content: space-between;
   padding: .14rem .62rem;
-  position: relative;
 }
-.header .logo { align-items: center; display: flex; height: .36rem; width: .79rem; }
-.header .logo svg { display: block; height: 100%; width: 100%; }
+.header .logo { align-items: center; display: flex; flex: 1 0 0; height: .36rem; }
+.header .logo svg { display: block; height: 100%; width: auto; }
 .header .navigation {
   align-items: center;
   display: flex;
+  flex: 0 0 auto;
   gap: .5rem;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
 }
 .header .navigation__link-text { font-size: .19rem; opacity: .6; cursor: pointer; transition: opacity .333s; }
 .header .navigation__link-text:hover { opacity: 1; }
-.header .buttons-block { align-items: center; display: flex; }
+.header .buttons-block { align-items: center; display: flex; flex: 1 0 0; justify-content: flex-end; }
 .header .mobile-menu-button { display: none; }
 .header .burger-btn { cursor: pointer; height: .24rem; position: relative; width: .24rem; }
 .header .burger-btn::before,
