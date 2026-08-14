@@ -221,8 +221,6 @@ main {
 .value-1 { color: var(--color-white); font-family: var(--main-font); font-size: var(--font-size-value1); font-weight: var(--font-weight-7); line-height: var(--line-height-value1); }
 .value-2 { color: var(--color-white); font-family: var(--main-font); font-size: var(--font-size-value2); font-weight: var(--font-weight-7); line-height: var(--line-height-value2); }
 
-.text-gray { color: #555b67; }
-
 /* ---- buttons ---- */
 .btn { align-items: center; border-radius: .04rem; cursor: pointer; display: inline-flex; padding: .1rem .24rem; white-space: nowrap; width: fit-content; }
 .btn-label { font-size: var(--font-size-btn-label2); font-weight: 700; line-height: var(--line-height-btn-label2); }
@@ -346,8 +344,8 @@ main {
 
 .hero-section #banner-mobile { display: none; }
 
-.hero-section .container { align-items: center; display: flex; flex-direction: column; justify-content: center; padding-top: 0; }
-.hero-text { display: flex; flex-direction: column; margin-bottom: .24rem; }
+.hero-section .container { align-items: center; display: flex; flex-direction: column; justify-content: center; padding-top: .9rem; }
+.hero-text { display: flex; flex-direction: column; margin-bottom: .5rem; }
 .hero-text .text-block .title-h1 { font-size: .56rem; margin-bottom: .24rem; text-align: center; }
 .hero-text .text-block .title-h1 .second-row { display: flex; flex-direction: row; gap: .2rem; justify-content: center; }
 .hero-text .text-block .title-h1 .txt-rotate {
@@ -362,9 +360,9 @@ main {
 
 .slider-container { margin: 0 auto; }
 .vaults-container { display: flex; flex-direction: row; gap: .18rem; justify-content: center; width: 100%; flex-wrap: wrap; }
-.vault__card { background-color: #202a3e; border-radius: .16rem; cursor: pointer; display: flex; flex-direction: column; gap: .16rem; padding: .18rem; transition: background .5s; width: 3rem; }
+.vault__card { background-color: #202a3e; border-radius: .18rem; cursor: pointer; display: flex; flex-direction: column; gap: .26rem; padding: .28rem; transition: background .5s; width: 3.5rem; }
 .vault__card:hover { background-color: rgba(32,42,62,.7); }
-.vault__header { align-items: stretch; display: flex; flex-direction: row; }
+.vault__header { align-items: stretch; display: flex; flex-direction: row; gap: .04rem; }
 .vault__logo {
   align-items: center; justify-content: center;
   background: linear-gradient(135deg,#3973cf,#0416d2);
@@ -374,9 +372,10 @@ main {
 .vault__header .title { display: flex; flex: 1; flex-direction: column; justify-content: space-between; min-width: 0; }
 .vault__header .title .title-h4 { font-size: .18rem; line-height: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .vault__header .title .desc-3 { color: #cdd0d6; line-height: 1; }
-.vault__performance .desc-3 { color: #cdd0d6; line-height: 1; margin-bottom: .05rem; }
-.vault__performance .title-h3 { align-items: center; display: flex; }
+.vault__performance .desc-3 { color: #cdd0d6; line-height: 1; margin-bottom: .06rem; }
+.vault__performance .title-h3 { align-items: baseline; display: flex; flex-wrap: wrap; gap: 0 .08rem; }
 .vault__performance .title-h3 small { font-size: 60%; }
+.vault__performance .metric-label { display: block; margin-top: .06rem; }
 .vault__footer { align-items: center; display: flex; flex-direction: row; justify-content: space-between; }
 .footer-left { align-items: center; display: flex; flex-direction: row; gap: .08rem; }
 .tvl { align-items: center; background-color: #404f6a; border-radius: .24rem; display: flex; flex-direction: row; gap: .02rem; height: .26rem; padding: .04rem .08rem; }
