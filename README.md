@@ -2,7 +2,7 @@
 
 Landing page de VA, agencia de inteligencia artificial que diseña, construye e integra automatizaciones a medida para empresas.
 
-🔗 Landing en vivo: _(añade aquí la URL cuando la despliegues, p. ej. en Vercel o Netlify)_
+🔗 Landing en vivo: [web-eficiente.vercel.app](https://web-eficiente.vercel.app/)
 
 ## Vista previa
 
@@ -45,4 +45,10 @@ y abrir `http://localhost:8080`.
 
 ## Imágenes por reemplazar
 
-Todos los huecos de imagen de la landing (logos de clientes en el hero, logos de integraciones/tecnologías en "Un ecosistema completo de automatización", imagen de equipo en "Tus datos, protegidos") están marcados con el bloque `.img-placeholder` (borde punteado) en `index.html`. Sustitúyelos por tus propias imágenes `<img>` cuando las tengas.
+Para que la landing no se vea vacía mientras no tienes tus assets reales, todos los huecos de imagen están rellenos con iconos/ilustraciones SVG genéricos en vez de cajas en blanco. Cada uno está marcado con un comentario `<!-- Sustituye ... -->` justo encima en `index.html`:
+
+- **Logos de clientes** (hero, "Confían en nosotros"): 5 marcas abstractas con clase `.logo-mark`
+- **Logos de integraciones / clientes / tecnologías** ("Un ecosistema completo de automatización"): iconos con clase `.logo-ph`
+- **Imagen de equipo/infraestructura** ("Tus datos, protegidos"): ilustración de red con clase `.illustration`
+
+Sustituye cada `<svg>...</svg>` por tu `<img>` real cuando lo tengas; el layout (tamaño, radio, espaciado) no cambia.

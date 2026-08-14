@@ -32,7 +32,6 @@
   });
 
   // Mobile menu
-  var header = document.getElementById("header");
   var mobileMenu = document.getElementById("mobileMenu");
   var openBtn = document.getElementById("mobileMenuOpen");
   var closeBtn = document.getElementById("mobileMenuClose");
@@ -55,11 +54,10 @@
     });
   });
 
-  // Header background + scroll-top button on scroll
+  // Scroll-top button visibility
   var scrollBtn = document.getElementById("scrollTopBtn");
   window.addEventListener("scroll", function () {
     var y = window.scrollY || window.pageYOffset;
-    if (header) header.classList.toggle("scrolled", y > 40);
     if (scrollBtn) scrollBtn.classList.toggle("visible", y > 600);
   });
 
