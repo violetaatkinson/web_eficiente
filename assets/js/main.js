@@ -1,6 +1,18 @@
 (function () {
   "use strict";
 
+  // Keep --header-height in sync with the real header (banner + nav row
+  // together), so sections below never get overlapped or leave a gap.
+  var headerEl = document.getElementById("header");
+  function syncHeaderHeight() {
+    if (headerEl) {
+      document.documentElement.style.setProperty("--header-height", headerEl.offsetHeight + "px");
+    }
+  }
+  syncHeaderHeight();
+  window.addEventListener("resize", syncHeaderHeight);
+  window.addEventListener("load", syncHeaderHeight);
+
   // Rotating word in the hero title
   var rotateEl = document.getElementById("txtRotate");
   if (rotateEl) {
