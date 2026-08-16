@@ -451,9 +451,9 @@ main {
 .text-block .desc-2 { opacity: .8; }
 
 /* ---- protocols / ecosystem section ---- */
-.protocols-section { min-height: 6.4rem; padding: 1.2rem 0; position: relative; }
-.protocols-section .text-block { margin: 0 auto .7rem; width: 6.82rem; }
-.filters { display: flex; flex-wrap: wrap; justify-content: center; margin: 0 auto; padding-bottom: .6rem; width: 8.5rem; }
+.protocols-section { min-height: 6.4rem; padding: .7rem 0 1.2rem; position: relative; }
+.protocols-section .text-block { margin: 0 auto .4rem; width: 6.82rem; }
+.filters { display: flex; flex-wrap: wrap; justify-content: center; margin: 0 auto; padding-bottom: .35rem; width: 8.5rem; }
 .filters__tag { border-radius: .8rem; cursor: pointer; margin: 0 .1rem; opacity: .5; padding: .08rem .3rem; transition: opacity .333s, background-color .333s; }
 .filters__tag.active,
 .filters__tag:hover { background-color: #fff; color: #000; opacity: 1; }
@@ -461,12 +461,12 @@ main {
 .protocols.active { display: flex; }
 .protocols__logo {
   align-items: center; background-color: var(--color-tertiary-dark); border-radius: 8px;
-  display: flex; flex-direction: column; gap: .08rem; height: 1.1rem; justify-content: center;
+  display: flex; flex-direction: row; gap: .1rem; height: 1.1rem; justify-content: center;
   opacity: 1; transition: opacity .333s; width: 30%;
 }
 .protocols__logo:hover { opacity: .6; }
-.protocols__logo svg.logo-ph { color: var(--color-main-accent); height: .32rem; opacity: .9; width: .32rem; }
-.protocols__logo .logo-ph__label { color: var(--color-white); font-family: var(--main-font); font-size: .13rem; font-weight: 700; letter-spacing: .02em; opacity: .7; }
+.protocols__logo svg.logo-ph { flex-shrink: 0; height: .32rem; width: .32rem; }
+.protocols__logo .logo-ph__label { color: var(--color-white); font-family: var(--main-font); font-size: .17rem; font-weight: 700; letter-spacing: .01em; }
 
 @media (min-width: 1025px) {
   .protocols-section .container { min-width: 8.4rem; width: 8.4rem; }
@@ -475,7 +475,7 @@ main {
   .protocols-section { padding-bottom: 1.33rem; }
   .protocols-section .text-block { margin-bottom: .66rem; width: auto; }
   .protocols { width: 5.7rem; }
-  .protocols__logo { height: 1.5rem; width: 1.5rem; }
+  .protocols__logo { flex-direction: column; gap: .08rem; height: 1.5rem; width: 1.5rem; }
 }
 @media (max-width: 480px) {
   .protocols-section { padding-bottom: .8rem; }
