@@ -265,27 +265,28 @@ main {
 .header.show-menu .header__border {
   background-color: rgba(255,255,255,.1);
 }
-/* Fila con ALTURA FIJA y explicita (.5rem). Los 3 bloques no se
-   centran por "align-items" del padre dependiendo de cual sea mas
-   alto: cada uno mide exactamente 100% de esa altura fija y se
-   centra POR SI MISMO puertas adentro. Cero ambiguedad de calculo
-   automatico de altura. */
+/* Spacing del header en PX FIJOS (no en el rem fluido del resto del
+   sitio, que escala con el viewport vw): asi la altura de la fila y
+   la separacion entre bloques quedan predecibles siempre, sin
+   importar el ancho de pantalla. min-height (no height) para que la
+   fila nunca se comprima por debajo de eso, pero pueda crecer si el
+   contenido lo necesita. */
 .header__row {
+  align-items: center;
   display: flex;
-  height: .5rem;
   justify-content: space-between;
-  padding: 0 .62rem;
+  min-height: 76px;
+  padding: 0 56px;
 }
 .header .logo,
 .header .navigation,
 .header .buttons-block {
   align-items: center;
   display: flex;
-  height: 100%;
 }
-.header .logo svg { display: block; height: .36rem; width: auto; }
-.header .navigation { gap: .4rem; }
-.header .navigation__link-text { font-size: .22rem; opacity: .6; cursor: pointer; transition: opacity .333s; }
+.header .logo svg { display: block; height: 36px; width: auto; }
+.header .navigation { gap: 28px; }
+.header .navigation__link-text { font-size: 19px; opacity: .6; cursor: pointer; transition: opacity .333s; }
 .header .navigation__link-text:hover { opacity: 1; }
 .header .mobile-menu-button { display: none; }
 .header .burger-btn { cursor: pointer; height: .24rem; position: relative; width: .24rem; }
