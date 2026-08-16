@@ -273,7 +273,7 @@ main {
    sin importar cuanto pesen el logo o el boton a los lados. */
 .header__row {
   display: table;
-  padding: .06rem .62rem;
+  padding: .05rem .62rem;
   table-layout: fixed;
   width: 100%;
 }
@@ -283,15 +283,16 @@ main {
   vertical-align: middle;
   width: 25%;
 }
-.header .logo svg { display: inline-block; height: .36rem; vertical-align: middle; width: auto; }
+.header .logo__mark { display: inline-block; height: .36rem; vertical-align: middle; }
+.header .logo__mark svg { display: block; height: 100%; width: auto; }
 .header .navigation {
   display: table-cell;
   text-align: center;
   vertical-align: middle;
   width: 50%;
 }
-.header .navigation__link { display: inline-block; margin: 0 .2rem; }
-.header .navigation__link-text { font-size: .19rem; opacity: .6; cursor: pointer; transition: opacity .333s; }
+.header .navigation__link { display: inline-block; margin: 0 .18rem; vertical-align: middle; }
+.header .navigation__link-text { font-size: .22rem; opacity: .6; cursor: pointer; transition: opacity .333s; }
 .header .navigation__link-text:hover { opacity: 1; }
 .header .buttons-block {
   display: table-cell;
@@ -306,7 +307,7 @@ main {
 .header .burger-btn::before { top: .05rem; }
 .header .burger-btn::after { bottom: .06rem; }
 
-#banner { padding: .07rem .6rem; position: relative; text-align: center; background: radial-gradient(circle,#08218f 40%,#298acb 100%); }
+#banner { padding: .05rem .6rem; position: relative; text-align: center; background: radial-gradient(circle,#08218f 40%,#298acb 100%); }
 #banner .desc-2 { font-size: .14rem; line-height: .2rem; }
 #banner a { color: var(--color-white); text-decoration: underline; }
 
@@ -314,7 +315,7 @@ main {
   .header__row { align-items: center; display: flex; justify-content: space-between; padding: .16rem .44rem; }
   .header .logo,
   .header .buttons-block { display: flex; width: auto; }
-  .header .logo { height: .3rem; }
+  .header .logo__mark { height: .3rem; }
   .header .navigation { display: none; }
   .header .buttons-block .btn-main { display: none; }
   .header .mobile-menu-button { display: block; margin-left: .32rem; }
