@@ -285,7 +285,7 @@ main {
   display: flex;
 }
 .header .logo svg { display: block; height: 36px; width: auto; }
-.header .navigation { gap: 28px; }
+.header .navigation { gap: 44px; }
 .header .navigation__link { align-items: center; display: flex; }
 .header .navigation__link-text { display: block; font-size: 19px; line-height: 1; opacity: .6; cursor: pointer; transition: opacity .333s; }
 .header .navigation__link-text:hover { opacity: 1; }
@@ -296,7 +296,7 @@ main {
 .header .burger-btn::before { top: .05rem; }
 .header .burger-btn::after { bottom: .06rem; }
 
-#banner { padding: .05rem .6rem; position: relative; text-align: center; background: radial-gradient(circle,#08218f 40%,#298acb 100%); }
+#banner { padding: .12rem .6rem; position: relative; text-align: center; background: radial-gradient(circle,#08218f 40%,#298acb 100%); }
 #banner .desc-2 { font-size: .14rem; line-height: .2rem; }
 #banner a { color: var(--color-white); text-decoration: underline; }
 
