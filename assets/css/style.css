@@ -343,7 +343,7 @@ main {
 .hero-section {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1.2rem;
+  margin-bottom: .2rem;
   padding-top: var(--header-height);
   position: relative;
 }
@@ -404,7 +404,7 @@ main {
 .vault__footer .splide__arrow:hover { opacity: 1; }
 .vault__footer .splide__arrow svg { height: .12rem; width: .12rem; }
 
-.hero__footer { align-items: flex-end; display: flex; flex-direction: row; justify-content: space-between; margin-top: .55rem; padding: .3rem .52rem; width: 100%; }
+.hero__footer { align-items: flex-end; display: flex; flex-direction: row; justify-content: space-between; margin-top: .55rem; padding: 0 .52rem; width: 100%; }
 .footer__investors { align-self: stretch; display: flex; flex-direction: column; justify-content: space-between; }
 .footer__investors .subtitle-2 { color: #cdd0d6; margin-bottom: .1rem; }
 .investors__logos { align-items: center; display: flex; flex-direction: row; gap: .24rem; }
@@ -449,7 +449,7 @@ main {
 .text-block .desc-2 { opacity: .8; }
 
 /* ---- protocols / ecosystem section ---- */
-.protocols-section { min-height: 6.4rem; padding: .7rem 0 1.2rem; position: relative; }
+.protocols-section { min-height: 6.4rem; padding: .3rem 0 1.2rem; position: relative; }
 .protocols-section .text-block { margin: 0 auto .4rem; width: 6.82rem; }
 .filters { display: flex; flex-wrap: wrap; justify-content: center; margin: 0 auto; padding-bottom: .35rem; width: 8.5rem; }
 .filters__tag { border-radius: .8rem; cursor: pointer; margin: 0 .1rem; opacity: .5; padding: .08rem .3rem; transition: opacity .333s, background-color .333s; }
