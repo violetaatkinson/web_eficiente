@@ -455,7 +455,7 @@ main {
 .filters__tag { border-radius: .8rem; cursor: pointer; margin: 0 .1rem; opacity: .5; padding: .08rem .3rem; transition: opacity .333s, background-color .333s; }
 .filters__tag.active,
 .filters__tag:hover { background-color: #fff; color: #000; opacity: 1; }
-.protocols { display: none; flex-wrap: wrap; justify-content: center; margin: 0 auto; gap: .2rem .12rem; }
+.protocols { display: none; flex-wrap: wrap; justify-content: center; margin: 0 auto; gap: .24rem; }
 .protocols.active { display: flex; }
 .protocols__logo {
   align-items: center; background-color: var(--color-tertiary-dark); border-radius: 8px;
