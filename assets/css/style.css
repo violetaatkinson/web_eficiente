@@ -284,7 +284,7 @@ main {
   height: 100%;
 }
 .header .logo svg { display: block; height: .36rem; width: auto; }
-.header .navigation__link:not(:last-child) { margin-right: .36rem; }
+.header .navigation { gap: .4rem; }
 .header .navigation__link-text { font-size: .22rem; opacity: .6; cursor: pointer; transition: opacity .333s; }
 .header .navigation__link-text:hover { opacity: 1; }
 .header .mobile-menu-button { display: none; }
