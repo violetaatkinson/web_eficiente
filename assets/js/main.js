@@ -50,26 +50,30 @@
   if (openBtn && mobileMenu) {
     openBtn.addEventListener("click", function () {
       mobileMenu.classList.add("is-open");
+      if (headerEl) headerEl.classList.add("show-menu");
       document.body.style.overflow = "hidden";
     });
   }
   if (closeBtn && mobileMenu) {
     closeBtn.addEventListener("click", function () {
       mobileMenu.classList.remove("is-open");
+      if (headerEl) headerEl.classList.remove("show-menu");
       document.body.style.overflow = "";
     });
   }
   mobileMenu && mobileMenu.querySelectorAll("a").forEach(function (link) {
     link.addEventListener("click", function () {
       mobileMenu.classList.remove("is-open");
+      if (headerEl) headerEl.classList.remove("show-menu");
       document.body.style.overflow = "";
     });
   });
 
-  // Scroll-top button visibility
+  // Header background: transparent at top, solid once scrolled
   var scrollBtn = document.getElementById("scrollTopBtn");
   window.addEventListener("scroll", function () {
     var y = window.scrollY || window.pageYOffset;
+    if (headerEl) headerEl.classList.toggle("scrolled", y > 50);
     if (scrollBtn) scrollBtn.classList.toggle("visible", y > 600);
   });
 

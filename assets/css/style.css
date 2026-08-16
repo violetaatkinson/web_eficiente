@@ -237,43 +237,49 @@ main {
 .btn-arrow .btn-icon__image { display: flex; height: .17rem; }
 .btn-arrow .btn-icon__image svg { height: 100%; width: 100%; }
 
-/* ---- header ---- */
+/* ---- header ----
+   Patron simple de 2 grupos (logo | resto), sin necesidad de centrar nada
+   independientemente: logo a la izquierda, [nav + boton] pegados a la
+   derecha como un unico bloque. Transparente arriba, solido al hacer
+   scroll o con el menu movil abierto (clases .scrolled / .show-menu
+   puestas por JS). */
 .header {
-  display: flex;
-  flex-direction: column;
+  background: transparent;
   position: fixed;
   left: 0;
   top: 0;
+  transition: background-color .4s ease;
   width: 100%;
   z-index: 10;
 }
-.header .bg {
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  background: linear-gradient(90deg, rgba(15,58,143,.55), rgba(8,19,54,.7) 40%, rgba(8,19,54,.7) 60%, rgba(15,58,143,.55));
-  height: 100%;
-  left: 0;
-  top: 0;
-  position: absolute;
-  width: 100%;
-  z-index: -1;
+.header.scrolled,
+.header.show-menu {
+  background-color: rgba(8,19,54,.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+.header__border {
+  background-color: transparent;
+  height: 1px;
+  transition: background-color .4s ease;
+}
+.header.scrolled .header__border,
+.header.show-menu .header__border {
+  background-color: rgba(255,255,255,.1);
 }
 .header__row {
   align-items: center;
   display: flex;
+  justify-content: space-between;
   padding: .14rem .62rem;
 }
-.header .logo { align-items: center; display: flex; flex: 1 0 0; height: .36rem; }
+.header .logo { align-items: center; display: flex; height: .36rem; }
 .header .logo svg { display: block; height: 100%; width: auto; }
-.header .navigation {
-  align-items: center;
-  display: flex;
-  flex: 0 0 auto;
-  gap: .5rem;
-}
+.header__right { align-items: center; display: flex; gap: .5rem; }
+.header .navigation { align-items: center; display: flex; gap: .4rem; }
 .header .navigation__link-text { font-size: .19rem; opacity: .6; cursor: pointer; transition: opacity .333s; }
 .header .navigation__link-text:hover { opacity: 1; }
-.header .buttons-block { align-items: center; display: flex; flex: 1 0 0; justify-content: flex-end; }
+.header .buttons-block { align-items: center; display: flex; }
 .header .mobile-menu-button { display: none; }
 .header .burger-btn { cursor: pointer; height: .24rem; position: relative; width: .24rem; }
 .header .burger-btn::before,
