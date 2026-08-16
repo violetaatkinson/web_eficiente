@@ -240,7 +240,7 @@ main {
 /* ---- header ----
    Logo | Navegacion | Boton, transparente arriba y solido al hacer
    scroll o con el menu movil abierto (clases .scrolled / .show-menu
-   puestas por JS). Ver mas abajo el porque de display:table. */
+   puestas por JS). */
 .header {
   background: transparent;
   position: fixed;
@@ -265,41 +265,22 @@ main {
 .header.show-menu .header__border {
   background-color: rgba(255,255,255,.1);
 }
-/* display:table + vertical-align:middle en vez de flex/grid: las 3
-   columnas quedan centradas en el mismo eje vertical sin depender de
-   que el navegador resuelva porcentajes de altura o posicionamiento
-   absoluto (ahi fallaba antes). table-layout:fixed reparte 25/50/25%
-   para que la columna central quede geometricamente centrada siempre,
-   sin importar cuanto pesen el logo o el boton a los lados. */
+/* Flex de una sola fila, los 3 bloques como hijos directos (sin
+   wrappers, sin table, sin position:absolute): align-items:center
+   los centra verticalmente entre si de forma directa. */
 .header__row {
-  display: table;
-  padding: .05rem .62rem;
-  table-layout: fixed;
-  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: .1rem .62rem;
 }
-.header .logo {
-  display: table-cell;
-  text-align: left;
-  vertical-align: middle;
-  width: 25%;
-}
-.header .logo__mark { display: inline-block; height: .36rem; vertical-align: middle; }
-.header .logo__mark svg { display: block; height: 100%; width: auto; }
-.header .navigation {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
-  width: 50%;
-}
-.header .navigation__link { display: inline-block; margin: 0 .18rem; vertical-align: middle; }
+.header .logo { display: flex; height: .36rem; }
+.header .logo svg { display: block; height: 100%; width: auto; }
+.header .navigation { align-items: center; display: flex; }
+.header .navigation__link:not(:last-child) { margin-right: .36rem; }
 .header .navigation__link-text { font-size: .22rem; opacity: .6; cursor: pointer; transition: opacity .333s; }
 .header .navigation__link-text:hover { opacity: 1; }
-.header .buttons-block {
-  display: table-cell;
-  text-align: right;
-  vertical-align: middle;
-  width: 25%;
-}
+.header .buttons-block { align-items: center; display: flex; }
 .header .mobile-menu-button { display: none; }
 .header .burger-btn { cursor: pointer; height: .24rem; position: relative; width: .24rem; }
 .header .burger-btn::before,
@@ -312,10 +293,8 @@ main {
 #banner a { color: var(--color-white); text-decoration: underline; }
 
 @media (max-width: 1024px) {
-  .header__row { align-items: center; display: flex; justify-content: space-between; padding: .16rem .44rem; }
-  .header .logo,
-  .header .buttons-block { display: flex; width: auto; }
-  .header .logo__mark { height: .3rem; }
+  .header__row { padding: .16rem .44rem; }
+  .header .logo { height: .3rem; }
   .header .navigation { display: none; }
   .header .buttons-block .btn-main { display: none; }
   .header .mobile-menu-button { display: block; margin-left: .32rem; }
@@ -375,7 +354,7 @@ main {
 
 .hero-section #banner-mobile { display: none; }
 
-.hero-section .container { align-items: center; display: flex; flex-direction: column; justify-content: center; padding-top: .9rem; }
+.hero-section .container { align-items: center; display: flex; flex-direction: column; justify-content: center; padding-top: .2rem; }
 .hero-text { display: flex; flex-direction: column; margin-bottom: .5rem; }
 .hero-text .text-block .title-h1 { font-size: .56rem; margin-bottom: .24rem; text-align: center; }
 .hero-text .text-block .title-h1 .second-row { display: flex; flex-direction: row; gap: .2rem; justify-content: center; }
