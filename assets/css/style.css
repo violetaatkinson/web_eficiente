@@ -238,11 +238,9 @@ main {
 .btn-arrow .btn-icon__image svg { height: 100%; width: 100%; }
 
 /* ---- header ----
-   Patron simple de 2 grupos (logo | resto), sin necesidad de centrar nada
-   independientemente: logo a la izquierda, [nav + boton] pegados a la
-   derecha como un unico bloque. Transparente arriba, solido al hacer
+   Logo | Navegacion | Boton, transparente arriba y solido al hacer
    scroll o con el menu movil abierto (clases .scrolled / .show-menu
-   puestas por JS). */
+   puestas por JS). Ver mas abajo el porque de display:table. */
 .header {
   background: transparent;
   position: fixed;
@@ -267,19 +265,40 @@ main {
 .header.show-menu .header__border {
   background-color: rgba(255,255,255,.1);
 }
+/* display:table + vertical-align:middle en vez de flex/grid: las 3
+   columnas quedan centradas en el mismo eje vertical sin depender de
+   que el navegador resuelva porcentajes de altura o posicionamiento
+   absoluto (ahi fallaba antes). table-layout:fixed reparte 25/50/25%
+   para que la columna central quede geometricamente centrada siempre,
+   sin importar cuanto pesen el logo o el boton a los lados. */
 .header__row {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  padding: .14rem .62rem;
+  display: table;
+  padding: .1rem .62rem;
+  table-layout: fixed;
+  width: 100%;
 }
-.header .logo { align-items: center; display: flex; height: .36rem; }
-.header .logo svg { display: block; height: 100%; width: auto; }
-.header__right { align-items: center; display: flex; gap: .5rem; }
-.header .navigation { align-items: center; display: flex; gap: .4rem; }
+.header .logo {
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+  width: 25%;
+}
+.header .logo svg { display: inline-block; height: .36rem; vertical-align: middle; width: auto; }
+.header .navigation {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  width: 50%;
+}
+.header .navigation__link { display: inline-block; margin: 0 .2rem; }
 .header .navigation__link-text { font-size: .19rem; opacity: .6; cursor: pointer; transition: opacity .333s; }
 .header .navigation__link-text:hover { opacity: 1; }
-.header .buttons-block { align-items: center; display: flex; }
+.header .buttons-block {
+  display: table-cell;
+  text-align: right;
+  vertical-align: middle;
+  width: 25%;
+}
 .header .mobile-menu-button { display: none; }
 .header .burger-btn { cursor: pointer; height: .24rem; position: relative; width: .24rem; }
 .header .burger-btn::before,
@@ -292,8 +311,10 @@ main {
 #banner a { color: var(--color-white); text-decoration: underline; }
 
 @media (max-width: 1024px) {
-  .header__row { padding: .16rem .44rem; }
-  .header .logo { height: .3rem; width: .65rem; }
+  .header__row { align-items: center; display: flex; justify-content: space-between; padding: .16rem .44rem; }
+  .header .logo,
+  .header .buttons-block { display: flex; width: auto; }
+  .header .logo { height: .3rem; }
   .header .navigation { display: none; }
   .header .buttons-block .btn-main { display: none; }
   .header .mobile-menu-button { display: block; margin-left: .32rem; }
