@@ -461,12 +461,12 @@ main {
 .protocols.active { display: flex; }
 .protocols__logo {
   align-items: center; background-color: var(--color-tertiary-dark); border-radius: 8px;
-  display: flex; flex-direction: row; gap: .1rem; height: 1.1rem; justify-content: center;
+  display: flex; flex-direction: row; gap: .16rem; height: 1.5rem; justify-content: center;
   opacity: 1; transition: opacity .333s; width: 30%;
 }
 .protocols__logo:hover { opacity: .6; }
-.protocols__logo svg.logo-ph { flex-shrink: 0; height: .32rem; width: .32rem; }
-.protocols__logo .logo-ph__label { color: var(--color-white); font-family: var(--main-font); font-size: .17rem; font-weight: 700; letter-spacing: .01em; }
+.protocols__logo svg.logo-ph { flex-shrink: 0; height: .44rem; width: .44rem; }
+.protocols__logo .logo-ph__label { color: var(--color-white); font-family: var(--main-font); font-size: .22rem; font-weight: 700; letter-spacing: .01em; }
 
 @media (min-width: 1025px) {
   .protocols-section .container { min-width: 8.4rem; width: 8.4rem; }
