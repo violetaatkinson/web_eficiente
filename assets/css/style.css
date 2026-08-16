@@ -286,7 +286,8 @@ main {
 }
 .header .logo svg { display: block; height: 36px; width: auto; }
 .header .navigation { gap: 28px; }
-.header .navigation__link-text { font-size: 19px; opacity: .6; cursor: pointer; transition: opacity .333s; }
+.header .navigation__link { align-items: center; display: flex; }
+.header .navigation__link-text { display: block; font-size: 19px; line-height: 1; opacity: .6; cursor: pointer; transition: opacity .333s; }
 .header .navigation__link-text:hover { opacity: 1; }
 .header .mobile-menu-button { display: none; }
 .header .burger-btn { cursor: pointer; height: .24rem; position: relative; width: .24rem; }
