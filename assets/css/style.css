@@ -273,7 +273,7 @@ main {
    sin importar cuanto pesen el logo o el boton a los lados. */
 .header__row {
   display: table;
-  padding: .1rem .62rem;
+  padding: .06rem .62rem;
   table-layout: fixed;
   width: 100%;
 }
@@ -306,7 +306,7 @@ main {
 .header .burger-btn::before { top: .05rem; }
 .header .burger-btn::after { bottom: .06rem; }
 
-#banner { padding: .12rem .6rem; position: relative; text-align: center; background: radial-gradient(circle,#08218f 40%,#298acb 100%); }
+#banner { padding: .07rem .6rem; position: relative; text-align: center; background: radial-gradient(circle,#08218f 40%,#298acb 100%); }
 #banner .desc-2 { font-size: .14rem; line-height: .2rem; }
 #banner a { color: var(--color-white); text-decoration: underline; }
 
