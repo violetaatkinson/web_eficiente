@@ -549,7 +549,7 @@ main {
 .point__logo--1 { background: linear-gradient(135deg,#6fa8ff,#3973cf); }
 .point__logo--2 { background: linear-gradient(135deg,#4de3c9,#1fae9a); }
 .point__title { margin-bottom: .29rem; min-height: .64rem; }
-.point__desc { margin-bottom: .3rem; min-height: .78rem; }
+.point__desc { margin-bottom: .1rem; min-height: 0; }
 .point__desc .desc-3 { opacity: .8; }
 .point .buttons-block { align-items: center; display: flex; gap: .2rem; }
 .point .buttons-block .btn-main { padding: .13rem .32rem; }
