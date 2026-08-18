@@ -578,8 +578,10 @@ main {
 .value { display: flex; flex-direction: column; text-align: center; }
 .value .value-1 { margin-bottom: .21rem; }
 .value__subtitle { align-items: center; display: flex; justify-content: center; }
-.value .subtitle-2 { opacity: .8; }
+.value .subtitle-2 { font-size: .17rem; opacity: .8; }
 .community-section .buttons-block { align-items: center; display: flex; justify-content: center; gap: .2rem; }
+.community-section .buttons-block .btn { padding: .14rem .34rem; }
+.community-section .buttons-block .btn-label { font-size: .18rem; }
 
 @media (max-width: 1024px) {
   .values-block { width: 5.33rem; flex-wrap: wrap; gap: .4rem 0; }
