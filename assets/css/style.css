@@ -167,7 +167,8 @@ input { font: inherit; }
 
 body {
   -webkit-font-smoothing: antialiased;
-  background: var(--color-main-dark);
+  background: linear-gradient(135deg, #2ec4b6 0%, #2c5c8f 45%, #2b2560 100%);
+  background-attachment: fixed;
   display: flex;
   flex-direction: column;
   font-family: var(--main-font);
