@@ -540,11 +540,14 @@ main {
 .point.text-block { text-align: left; width: 3.3rem; }
 .point.text-block .text-block__title { margin-bottom: .29rem; margin-top: .5rem; }
 .point.text-block .subtitle-1 { opacity: .9; }
+.point.text-block .subtitle-1 a { color: #6ae4ff; }
 .point { width: 3.3rem; }
 .point__logo {
-  align-items: center; background: rgba(255,255,255,.06); border-radius: .16rem; display: flex;
-  height: .7rem; justify-content: center; margin-bottom: .3rem; width: .7rem; color: var(--color-main-accent);
+  align-items: center; border-radius: .16rem; display: flex;
+  height: .7rem; justify-content: center; margin-bottom: .3rem; width: .7rem; color: #fff;
 }
+.point__logo--1 { background: linear-gradient(135deg,#6fa8ff,#3973cf); }
+.point__logo--2 { background: linear-gradient(135deg,#4de3c9,#1fae9a); }
 .point__title { margin-bottom: .29rem; min-height: .64rem; }
 .point__desc { margin-bottom: .3rem; min-height: 1.1rem; }
 .point__desc .desc-3 { opacity: .8; }
