@@ -223,7 +223,7 @@ main {
 
 /* ---- buttons ---- */
 .btn { align-items: center; border-radius: .04rem; cursor: pointer; display: inline-flex; padding: .1rem .24rem; white-space: nowrap; width: fit-content; }
-.btn-label { font-size: var(--font-size-btn-label2); font-weight: 700; line-height: var(--line-height-btn-label2); }
+.btn-label { color: var(--color-white); font-size: var(--font-size-btn-label2); font-weight: 700; line-height: var(--line-height-btn-label2); }
 .btn-main { background: var(--color-white); overflow: hidden; position: relative; }
 .btn-main .btn-label { color: var(--color-black); position: relative; transition: color .4s cubic-bezier(.66,0,.34,1); z-index: 1; }
 .btn-main::after { background: var(--color-primary); border-radius: 50%; content: ""; height: 2rem; left: 50%; pointer-events: none; position: absolute; top: 100%; transform: translate(-50%); transition: transform .4s cubic-bezier(.66,0,.34,1); width: 150%; z-index: 0; }
@@ -603,7 +603,7 @@ main {
 
 /* ---- footer ---- */
 .footer { background: var(--color-secondary-dark); padding: .8rem 0 .3rem; position: relative; }
-.footer .container { display: flex; justify-content: space-between; gap: .4rem; }
+.footer .container { align-items: flex-start; display: flex; justify-content: space-between; gap: .4rem; }
 .footer .logo { display: flex; height: .35rem; margin-bottom: .4rem; width: .9rem; }
 .footer .logo svg { height: 100%; width: 100%; }
 .newsletter-form .email__input {
@@ -618,7 +618,7 @@ main {
 .newsletter-form .subtitle-2 { font-size: .12rem; opacity: .7; }
 .newsletter-form .subtitle-2 a { text-decoration: underline; }
 
-.footer .right-wrap .navigation { display: flex; gap: .58rem; }
+.footer .right-wrap .navigation { align-items: flex-start; display: flex; gap: .58rem; }
 .footer .navigation__list { display: flex; flex-direction: column; min-width: 1.4rem; }
 .footer .navigation__header { margin-bottom: .3rem; opacity: .9; }
 .footer .navigation__link { display: block; margin-bottom: .16rem; opacity: .5; transition: opacity .333s; width: max-content; }
