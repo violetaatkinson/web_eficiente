@@ -539,6 +539,7 @@ main {
 .points { display: flex; justify-content: space-between; gap: .3rem; }
 .point.text-block { text-align: left; width: 3.3rem; }
 .point.text-block .text-block__title { margin-bottom: .29rem; margin-top: .5rem; }
+.text-block__subtitle { align-items: center; display: flex; }
 .point.text-block .subtitle-1 { opacity: .9; }
 .point.text-block .subtitle-1 a { color: #6ae4ff; }
 .point { width: 3.3rem; }
@@ -576,6 +577,7 @@ main {
 .values-block { align-items: center; display: flex; justify-content: space-between; margin: 0 auto .6rem; width: 8.38rem; }
 .value { display: flex; flex-direction: column; text-align: center; }
 .value .value-1 { margin-bottom: .21rem; }
+.value__subtitle { align-items: center; display: flex; justify-content: center; }
 .value .subtitle-2 { opacity: .8; }
 .community-section .buttons-block { align-items: center; display: flex; justify-content: center; gap: .2rem; }
 
