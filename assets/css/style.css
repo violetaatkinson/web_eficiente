@@ -552,6 +552,7 @@ main {
 .point__desc { margin-bottom: .28rem; min-height: 0; }
 .point__desc .desc-3 { opacity: .8; }
 .point .buttons-block { align-items: center; display: flex; gap: .2rem; }
+.point .buttons-block .button { align-items: center; display: flex; }
 .point .buttons-block .btn-main { padding: .13rem .32rem; }
 .point .buttons-block .btn-main .btn-label { font-size: .17rem; }
 .point .buttons-block .btn-arrow .btn-label { color: #fff; font-size: .17rem; opacity: 1; }
