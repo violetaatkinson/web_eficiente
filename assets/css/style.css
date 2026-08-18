@@ -549,9 +549,14 @@ main {
 .point__logo--1 { background: linear-gradient(135deg,#6fa8ff,#3973cf); }
 .point__logo--2 { background: linear-gradient(135deg,#4de3c9,#1fae9a); }
 .point__title { margin-bottom: .29rem; min-height: .64rem; }
-.point__desc { margin-bottom: .3rem; min-height: 1.1rem; }
+.point__desc { margin-bottom: .3rem; min-height: .78rem; }
 .point__desc .desc-3 { opacity: .8; }
-.point .buttons-block { display: flex; gap: .12rem; }
+.point .buttons-block { align-items: center; display: flex; gap: .2rem; }
+.point .buttons-block .btn-main { padding: .13rem .32rem; }
+.point .buttons-block .btn-main .btn-label { font-size: .17rem; }
+.point .buttons-block .btn-arrow .btn-label { color: #fff; font-size: .17rem; opacity: 1; }
+.point .buttons-block .btn-arrow .btn-icon { width: .18rem; }
+.point .buttons-block .btn-arrow .btn-icon__image { height: .22rem; }
 
 @media (max-width: 1024px) {
   .points { flex-direction: column; }
