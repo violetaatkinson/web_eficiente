@@ -300,7 +300,7 @@ main {
 .header .burger-btn::before { top: .05rem; }
 .header .burger-btn::after { bottom: .06rem; }
 
-#banner { padding: .12rem .6rem; position: relative; text-align: center; background: rgba(0,0,0,.18); border-bottom: 1px solid rgba(255,255,255,.08); }
+#banner { padding: .12rem .6rem; position: relative; text-align: center; background: linear-gradient(90deg,#17a398,#0d5f57 55%,#14213f); }
 #banner .desc-2 { font-size: .14rem; line-height: .2rem; }
 #banner a { color: var(--color-white); text-decoration: underline; }
 
