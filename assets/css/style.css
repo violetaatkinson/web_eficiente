@@ -604,7 +604,7 @@ main {
 
 /* ---- footer ---- */
 .footer { background: var(--color-secondary-dark); padding: .8rem 0 .3rem; position: relative; }
-.footer .container { align-items: flex-start; display: flex; justify-content: space-between; gap: .4rem; }
+.footer .container { align-items: flex-start; display: flex; justify-content: space-between; gap: 1.6rem; }
 .footer .left-wrap { display: flex; flex-direction: column; }
 .footer .logo { display: flex; height: .35rem; margin-bottom: .4rem; width: .9rem; }
 .footer .logo svg { height: 100%; width: 100%; }
@@ -619,7 +619,7 @@ main {
 .newsletter-form .email-input::placeholder { color: var(--color-gray); opacity: .6; }
 .newsletter-form .email-input:focus { outline: none; }
 .newsletter-form .email__input .btn { height: 100%; padding: 0 .2rem; }
-.newsletter-form .subtitle-2 { font-size: .12rem; opacity: .7; }
+.newsletter-form .subtitle-2 { font-size: .12rem; margin-top: 15px; opacity: .7; }
 .newsletter-form .subtitle-2 a { text-decoration: underline; }
 
 .footer .right-wrap .navigation { align-items: flex-start; display: flex; gap: .58rem; }
