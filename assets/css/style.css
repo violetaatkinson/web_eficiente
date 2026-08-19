@@ -14,19 +14,22 @@
 html {
   /* Cap el tamaño raíz para que no crezca sin límite en monitores anchos
      (ese descontrol es lo que hacía que todo se viera gigante). El diseño
-     está calibrado para un ancho de referencia de ~1440px (100px = 1rem). */
-  font-size: min(6.94444vw, 100px);
+     está calibrado para un ancho de referencia de ~1440px. Multiplicador
+     x1.2 sobre el original para que TODA la tipografia y el spacing del
+     sitio (todo esta en rem) se agranden proporcionalmente de una vez,
+     manteniendo intacta la jerarquia ya calibrada. */
+  font-size: min(8.33333vw, 120px);
 }
 
 @media (max-width: 1024px) {
   html {
-    font-size: 13.02083vw;
+    font-size: 15.625vw;
   }
 }
 
 @media (max-width: 480px) {
   html {
-    font-size: 26.66667vw;
+    font-size: 32vw;
   }
 }
 
@@ -253,7 +256,7 @@ main {
 }
 .header.scrolled,
 .header.show-menu {
-  background-color: rgba(20,33,63,.92);
+  background-color: rgba(10,15,30,.45);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
 }
@@ -276,8 +279,8 @@ main {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  min-height: 76px;
-  padding: 0 56px;
+  min-height: 91px;
+  padding: 0 67px;
 }
 .header .logo,
 .header .navigation,
@@ -285,10 +288,10 @@ main {
   align-items: center;
   display: flex;
 }
-.header .logo svg { display: block; height: 36px; width: auto; }
-.header .navigation { gap: 44px; }
+.header .logo svg { display: block; height: 43px; width: auto; }
+.header .navigation { gap: 53px; }
 .header .navigation__link { align-items: center; display: flex; }
-.header .navigation__link-text { display: block; font-size: 19px; line-height: 1; opacity: .6; cursor: pointer; transition: opacity .333s; }
+.header .navigation__link-text { display: block; font-size: 23px; line-height: 1; opacity: .6; cursor: pointer; transition: opacity .333s; }
 .header .navigation__link-text:hover { opacity: 1; }
 .header .mobile-menu-button { display: none; }
 .header .burger-btn { cursor: pointer; height: .24rem; position: relative; width: .24rem; }
@@ -297,7 +300,7 @@ main {
 .header .burger-btn::before { top: .05rem; }
 .header .burger-btn::after { bottom: .06rem; }
 
-#banner { padding: .12rem .6rem; position: relative; text-align: center; background: linear-gradient(90deg,#0d5f57,#14213f 55%,#100c26); }
+#banner { padding: .12rem .6rem; position: relative; text-align: center; background: rgba(0,0,0,.18); border-bottom: 1px solid rgba(255,255,255,.08); }
 #banner .desc-2 { font-size: .14rem; line-height: .2rem; }
 #banner a { color: var(--color-white); text-decoration: underline; }
 
@@ -619,14 +622,14 @@ main {
 .newsletter-form .email-input::placeholder { color: var(--color-gray); opacity: .6; }
 .newsletter-form .email-input:focus { outline: none; }
 .newsletter-form .email__input .btn { height: 100%; padding: 0 .2rem; }
-.newsletter-form .subtitle-2 { font-size: .12rem; margin-top: 15px; opacity: .7; }
+.newsletter-form .subtitle-2 { font-size: .12rem; margin-top: 18px; opacity: .7; }
 .newsletter-form .subtitle-2 a { text-decoration: underline; }
 
 .footer .right-wrap .navigation { align-items: flex-start; display: flex; gap: .58rem; }
 .footer .navigation__list { display: flex; flex-direction: column; }
-.footer .navigation__header { display: block; font-size: 19px; line-height: 1.2; margin: 0 0 20px; opacity: .9; }
-.footer .navigation__link { display: block; line-height: 1.2; margin: 0 0 14px; opacity: .5; transition: opacity .333s; width: max-content; }
-.footer .navigation__link a { display: block; font-size: 18px; line-height: 1.2; }
+.footer .navigation__header { display: block; font-size: 23px; line-height: 1.2; margin: 0 0 24px; opacity: .9; }
+.footer .navigation__link { display: block; line-height: 1.2; margin: 0 0 17px; opacity: .5; transition: opacity .333s; width: max-content; }
+.footer .navigation__link a { display: block; font-size: 22px; line-height: 1.2; }
 .footer .navigation__link:hover { opacity: 1; }
 
 .footer .container.copyright { align-items: baseline; display: flex; flex-wrap: wrap; gap: 0 .5rem; justify-content: normal; padding-top: .8rem; }
