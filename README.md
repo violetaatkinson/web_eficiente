@@ -10,10 +10,17 @@ Es una landing de una sola página (*single-page*), 100% estática, sin framewor
 
 ## 📸 Preview
 
-> Todavía no hay capturas versionadas en el repo — este entorno no tiene acceso a un navegador para generarlas automáticamente. Cuando tengas una, guardala en `docs/screenshots/` (por ejemplo `hero.png`, `full-page.png`) y reemplazá esta sección por:
-> `![Hero](docs/screenshots/hero.png)`
->
-> Mientras tanto, podés ver el sitio funcionando en el demo en vivo de arriba.
+| Hero | Ecosistema de integraciones |
+|---|---|
+| ![Hero](docs/screenshots/hero.png) | ![Ecosistema](docs/screenshots/ecosystem.png) |
+
+| Seguridad y certificaciones | Programa de partners |
+|---|---|
+| ![Seguridad](docs/screenshots/security.png) | ![Partners](docs/screenshots/partners.png) |
+
+| Resultados | Footer |
+|---|---|
+| ![Resultados](docs/screenshots/results.png) | ![Footer](docs/screenshots/footer.png) |
 
 ---
 
@@ -55,34 +62,13 @@ Es una landing de una sola página (*single-page*), 100% estática, sin framewor
 ├── index.html              # Landing completa: header, hero, servicios, seguridad, alianzas, resultados, footer
 ├── assets/
 │   ├── css/style.css       # Sistema de diseño completo (tipografía fluida, colores, componentes, responsive)
-│   ├── js/main.js          # Interacciones: rotación de texto, filtros, menú móvil, scroll-to-top, header dinámico
-│   └── img/                # Vacío por ahora — reservada para imágenes reales (logos, fotos) cuando las tengas
+│   └── js/main.js          # Interacciones: rotación de texto, filtros, menú móvil, scroll-to-top, header dinámico
+├── docs/screenshots/       # Capturas usadas en este README
 ├── CLAUDE.md                # Reglas de trabajo del agente para este proyecto
 └── README.md
 ```
 
-No hay carpetas de `backend/`, `docs/` ni assets sin usar en el proyecto — se revisó explícitamente y `assets/img/` está vacía (todos los logos/íconos actuales son SVG inline dentro de `index.html`, marcados con comentarios `<!-- Sustituye ... -->` para cuando tengas tus propias imágenes).
-
----
-
-## 🚀 Cómo correrlo en local
-
-No requiere instalación ni dependencias.
-
-**Opción 1 — Abrir directo:**
-Doble clic en `index.html` (o clic derecho → "Open with Live Server" si usás esa extensión de VS Code).
-
-**Opción 2 — Servidor estático:**
-```bash
-npx http-server -p 8080
-```
-y abrir `http://localhost:8080`.
-
----
-
-## 🔐 Variables de entorno
-
-Ninguna. El proyecto no usa `.env`, claves de API ni backend — todo el contenido es estático.
+Todos los logos/íconos son SVG inline dentro de `index.html` (marcados con comentarios `<!-- Sustituye ... -->` para cuando tengas tus propias imágenes) — por eso no hay una carpeta `assets/img/`.
 
 ---
 
