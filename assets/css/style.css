@@ -605,7 +605,7 @@ main {
 /* ---- footer ---- */
 .footer { background: var(--color-secondary-dark); padding: .8rem 0 .3rem; position: relative; }
 .footer .container { align-items: flex-start; display: flex; justify-content: space-between; gap: .4rem; }
-.footer .left-wrap { display: flex; flex-direction: column; margin-left: 2.2rem; }
+.footer .left-wrap { display: flex; flex-direction: column; }
 .footer .logo { display: flex; height: .35rem; margin-bottom: .4rem; width: .9rem; }
 .footer .logo svg { height: 100%; width: 100%; }
 .newsletter-form { display: block; }
