@@ -605,14 +605,14 @@ main {
 /* ---- footer ---- */
 .footer { background: var(--color-secondary-dark); padding: .8rem 0 .3rem; position: relative; }
 .footer .container { align-items: flex-start; display: flex; justify-content: space-between; gap: .4rem; }
-.footer .left-wrap { display: flex; flex-direction: column; margin-left: 1.2rem; }
+.footer .left-wrap { display: flex; flex-direction: column; margin-left: 2.2rem; }
 .footer .logo { display: flex; height: .35rem; margin-bottom: .4rem; width: .9rem; }
 .footer .logo svg { height: 100%; width: 100%; }
 .newsletter-form { display: block; }
 .newsletter-form .email.email-container { display: flex; flex-direction: column; }
 .newsletter-form .email__input {
   align-items: center; background: rgba(70,77,102,.15); border: 1px solid hsla(0,0%,100%,.06);
-  border-radius: .04rem; display: flex; height: .42rem; justify-content: space-between; margin-bottom: .05rem;
+  border-radius: .04rem; display: flex; height: .42rem; justify-content: space-between; margin-bottom: .16rem;
   padding-left: .2rem; width: 3.62rem;
 }
 .newsletter-form .email-input { background: none; border: none; color: var(--color-white); flex: 1; font-family: var(--main-font); font-size: .14rem; }
